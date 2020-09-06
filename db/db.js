@@ -25,6 +25,16 @@ class Db {
         return parsedNote;
         });
     }
+    
+    addNote(note){
+        const {title, text} = note;
+        const newNote = {title, text, id: uuidv1()};
+        return this.getNote()
+        .then (notes => [...notes, newNote]) 
+        .then (writeNote => this.write(writeNote)
+        .then (() => newNote)
+        )
+    }
 }
 module.exports = new Db();
 
