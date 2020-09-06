@@ -14,6 +14,16 @@ router.post("/notes", (req, res) => {
         .catch((err) => res.status(500).json(err));
 });
 
+router.delete("/notes/:id", function (req, res) {
+   console.log("delete route trigger")
+    console.log(req.params.id)
+    Db.removeNote(req.params.id) 
+        .then(() => res.send(200))          
+        .catch((err) => 
+        console.log(err));
+        
+});
+
 module.exports = router;
 
 
