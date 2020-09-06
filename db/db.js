@@ -11,9 +11,21 @@ class Db {
     }
     write(note){
         return writeData("db/db.json", JSON.stringify(note));
-    } 
-};
- 
+    }
+    getNote(){
+        return this.read()
+        .then (notes => {
+    
+        let parsedNote;
+        try {
+            parsedNote = [].concat(JSON.parse(notes));
+        } catch (err) {
+            parsedNote = [];
+        }
+        return parsedNote;
+        });
+    }
+}
 module.exports = new Db();
 
 
