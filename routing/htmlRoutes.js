@@ -1,6 +1,7 @@
+// dependincies
 const path = require('path');
 const router = require('express').Router();
-
+//HTML get requests
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
