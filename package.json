@@ -1,0 +1,31 @@
+{
+  "name": "Express-Note-Taker",
+  "version": "1.0.0",
+  "description": "This app uses express.js to store and post notes.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "util": "^0.12.3",
+    "uuidv1": "^1.6.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reedsantos/Express-Note-Taker.git"
+  },
+  "keywords": [
+    "express",
+    "note",
+    "node"
+  ],
+  "author": "Reed Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reedsantos/Express-Note-Taker/issues"
+  },
+  "homepage": "https://github.com/Reedsantos/Express-Note-Taker#readme"
+}
