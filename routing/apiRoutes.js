@@ -8,5 +8,12 @@ router.get("/notes", function (req, res) {
         .then((note) => res.json(note))  
         .catch((err) => res.status(500).json(err));
 });
+router.post("/notes", (req, res) => {
+    Db.addNote(req.body)
+        .then((note) => res.json(note))
+        .catch((err) => res.status(500).json(err));
+});
 
 module.exports = router;
+
+
