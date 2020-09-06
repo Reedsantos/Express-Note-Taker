@@ -35,6 +35,17 @@ class Db {
         .then (() => newNote)
         )
     }
+    removeNote(id){
+        return this.getNote()
+        .then (function (allNotes) {
+            console.log(allNotes)
+            return allNotes.filter(function (note) {
+                console.log(note.id !== id) 
+                return note.id !== id
+                });
+            })    
+        .then(filterNotes => this.write(filterNotes));       
+    } 
 }
 module.exports = new Db();
 
